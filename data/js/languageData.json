@@ -1,0 +1,110 @@
+{
+  "GB": {
+    "address": "Warsaw",
+    "education": {
+      "title": "Education",
+      "name": "Belarusian State Technological University",
+      "faculty": "Landscape Architecture",
+      "period": "Miensk, Belarus | 08/2016 - 06/2020"
+    },
+    "Languages": {
+      "title": "Languages",
+      "Lang_1": "Polish",
+      "Lang_2": "English",
+      "Lang_3": "Belarusian",
+      "Lang_4": "Russian"
+    },
+    "technology": {
+      "title": "Technology"
+    },
+    "softSkills": {
+      "title": "Soft skills",
+      "Skill_1": "Communicative",
+      "Skill_2": "Easy learning",
+      "Skill_3": "Patient",
+      "Skill_4": "Leader skills",
+      "Skill_5": "Creativity",
+      "Skill_6": "Perseverance in the pursuit of the goal"
+    },
+    "projects": {
+      "title": "Projects",
+      "project_1": {
+        "description": "Challenge from Frontend Mentor. It's about making regular short links easier to use on dashboards instead of using a lot of space."
+      },
+      "button_GH": "GitHub page"
+    },
+    "footer": "I agree to the processing of personal data provided in this document for realising the recruitment process pursuant to the Personal Data Protection Act of 10 May 2018 (Journal of Laws 2018, item 1000) and in agreement with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation)."
+  },
+  "PL": {
+    "address": "Warszawa",
+    "education": {
+      "title": "Wykształcenie",
+      "name": "Białoruski Państwowy Uniwersytet Technologiczny",
+      "faculty": "Budownictwo ogrodowo-parkowe",
+      "period": "Mińsk, Białoruś | 08/2016 - 06/2020"
+    },
+    "Languages": {
+      "title": "Języki",
+      "Lang_1": "Polski",
+      "Lang_2": "Angielski",
+      "Lang_3": "Białoruski",
+      "Lang_4": "Rosyjski"
+    },
+    "technology": {
+      "title": "Technologii"
+    },
+    "softSkills": {
+      "title": "Umiejętności miękkie",
+      "Skill_1": "Komunikacyjność",
+      "Skill_2": "Szybkie uczenie się",
+      "Skill_3": "Cierpliwość",
+      "Skill_4": "Umiejętności liderskie",
+      "Skill_5": "Kreatywność",
+      "Skill_6": "Wytrwałość w dążeniu do celu"
+    },
+    "projects": {
+      "title": "Projekty",
+      "project_1": {
+        "description": "Challenge ze strony Frontend Mentor. Polega na robienie ze zwykłych linków skróconych, których jest łatwiej używać na deskach informacyjnych, ponieważ nie używa dużo miejsca."
+      },
+      "button_GH": "Strona GitHub"
+    },
+    "footer": " Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO)."
+  },
+  "BY": {
+    "address": "Varšava",
+    "education": {
+      "title": "Adukacyja",
+      "name": "Biełaruski dziaržaŭny technalahičny ŭniversytet",
+      "faculty": "Sadova-parkavaje budaŭnictva",
+      "period": "Miensk, Biełaruś | 08/2016 - 06/2020"
+    },
+    "Languages": {
+      "title": "Movy",
+      "Lang_1": "Polskaja",
+      "Lang_2": "Anhielskaja",
+      "Lang_3": "Biełaruskaja",
+      "Lang_4": "Rasiejskaja"
+    },
+    "technology": {
+      "title": "Technalohii"
+    },
+    "softSkills": {
+      "title": "Miakkija umieńnia",
+      "Skill_1": "Kamunikatyŭny",
+      "Skill_2": "Chutkaje navučańnie",
+      "Skill_3": "Ciarpieńnie",
+      "Skill_4": "Liderskija navyki",
+      "Skill_5": "Tvorčaść",
+      "Skill_6": "Nastojlivaść u imknieńni da mety"
+    },
+    "projects": {
+      "title": "Praekty",
+      "project_1": {
+        "description": "Vyklik ad Frontend Mentor. Havorka idzie ab palahčeńni vykarystańnia zvyčajnych karotkich spasyłak na prybornych panelach z metaj pamiańšieńnia zajmajmaha miejsca."
+      },
+      "button_GH": "Strona GitHub"
+    },
+    "footer": " Ja daju zhodu na apracoŭku maich asabistych danych dla met pracesu najmu ŭ adpaviednaści z Rehłamientam (JES) 2016/679 Jeŭrapiejskaha parlamienta i Savieta ad 27 krasavika 2016 h. ab abaronie fizičnych asob u dačynieńni da apracoŭki asabistych danych i ab svabodnym pieramiaščeńni takich i ab admienie Dyrektyvy 95/46/EC (GDPR)."
+  }
+}
