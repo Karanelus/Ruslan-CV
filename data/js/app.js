@@ -1,4 +1,4 @@
-import languageData from "../js/LanguageData.json" assert { type: "json" };
+import languageData from "./LanguageData.json" assert { type: "json" };
 
 const ligthMode_button = document.querySelector("#buttons__lightMode");
 const language_button = document.querySelector("button#buttons__Language");
