@@ -5,5 +5,5 @@ Hey, my name is Rusłan, and i'm really love coding, perhaps opened it only half
 https://karanelus.github.io/Ruslan-CV/
 
 # Khown problems
-1) JS folder are unsseen on GH Pages
+1) JS folder are unseen on GH Pages
 2) Bad response on mobile devise
