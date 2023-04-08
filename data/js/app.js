@@ -124,37 +124,39 @@ function LangOption(LangText) {
   );
   setAllLanguages(Lang_Render);
 
-  langAddressTxt.innerText = languageData[LangText].address;
+  const langShortcut = languageData[LangText];
 
-  langEducationTxt.innerText = languageData[LangText].education.title;
-  langUniNameTxt.innerText = languageData[LangText].education.name;
-  langFacultyTxt.innerText = languageData[LangText].education.faculty;
-  langPeriodEdTxt.innerText = languageData[LangText].education.period;
+  langAddressTxt.innerText = langShortcut.address;
 
-  langLanguagesTxt.innerText = languageData[LangText].Languages.title;
+  langEducationTxt.innerText = langShortcut.education.title;
+  langUniNameTxt.innerText = langShortcut.education.name;
+  langFacultyTxt.innerText = langShortcut.education.faculty;
+  langPeriodEdTxt.innerText = langShortcut.education.period;
+
+  langLanguagesTxt.innerText = langShortcut.Languages.title;
   langLangCountTxt.forEach((text, index) => {
     let txtLng = `Lang_${index + 1}`;
-    text.innerText = languageData[LangText].Languages[txtLng];
+    text.innerText = langShortcut.Languages[txtLng];
   });
 
-  langTechTitleTxt.innerText = languageData[LangText].technology.title;
+  langTechTitleTxt.innerText = langShortcut.technology.title;
 
-  langSoftSkillsTxt.innerText = languageData[LangText].softSkills.title;
+  langSoftSkillsTxt.innerText = langShortcut.softSkills.title;
   langSftSkCountTxt.forEach((text, index) => {
     let txtSSkl = `Skill_${index + 1}`;
-    text.innerText = languageData[LangText].softSkills[txtSSkl];
+    text.innerText = langShortcut.softSkills[txtSSkl];
   });
 
-  langProjectsSectTxt.innerText = languageData[LangText].projects.title;
+  langProjectsSectTxt.innerText = langShortcut.projects.title;
   langDescCountTxt.forEach((text, index) => {
     let txtDsc = `project_${index + 1}`;
-    text.innerText = languageData[LangText].projects[txtDsc].description;
+    text.innerText = langShortcut.projects[txtDsc].description;
   });
   langButtonGITHUBPageTxt.forEach((button) => {
-    button.innerText = languageData[LangText].projects.button_GH;
+    button.innerText = langShortcut.projects.button_GH;
   });
 
-  langFooter.innerText = languageData[LangText].footer;
+  langFooter.innerText = langShortcut.footer;
 }
 
 function setAllLanguages(value) {

@@ -283,6 +283,7 @@ main {
   align-items: center;
   background: var(--bc_Education_Univer);
   border-radius: calc(var(--border_radius) * 0.5);
+  box-shadow: 0px 0px 15px 3px #cfc296;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 40% 35% 25%;
@@ -434,6 +435,7 @@ main {
   align-items: center;
   background-color: var(--bc_Projects_ch);
   border-radius: calc(var(--border_radius) * 0.5);
+  box-shadow: 0px 0px 25px 4px #0d1017;
   color: var(--DM-Gray);
   display: grid;
   gap: 0.3rem;
