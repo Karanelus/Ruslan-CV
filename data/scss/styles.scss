@@ -1,0 +1,644 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --body-BC_001: #5dd3c9;
+  --body-BC_002: #a3bec9;
+  --body-BC_003: #8ae99b;
+
+  --background-curcle: none;
+  --bc_button_001: #4e5557d2;
+  --bc_button_002: #ffffff00;
+  --bc_Education_Univer: #cfc296a8;
+  --bc_Education_Univer--boxshadow: #cfc296;
+  --bc_Personal-Info_001: #ffffffbe;
+  --bc_Personal-Info_002: #726b6500;
+  --bc_Personal-Info_003: #ffffff00;
+  --bc_Technologies_ch: #23888fc9;
+  --bc_Technologies_ch--boxshadow: #3d443f;
+  --bc_Projects_ch: #0d1017d2;
+  --bc_Soft-Skills_ch: #1160bbcc;
+  --DM-Black: #000000;
+  --DM-White: #ffffff;
+  --DM-Gray: #868f99;
+  --DM-Filter: none;
+  --Personal-Info__photo: none;
+
+  --bt_center-line: 80%;
+  --border_radius: 1.25rem;
+  --gradient_angle: 70deg;
+
+  --font-size: 1.25rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration-line: none;
+}
+
+body {
+  align-items: center;
+  animation: gradient 25s ease infinite;
+  background: linear-gradient(
+    70deg,
+    var(--body-BC_001),
+    var(--body-BC_002) 33%,
+    var(--body-BC_003) 67%
+  );
+  background-size: 600% 600%;
+  color: var(--DM-Black);
+  display: flex;
+  flex-direction: column;
+  font-family: "Overpass", sans-serif;
+  font-size: var(--font-size);
+  justify-content: center;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  transition: 0.31415s;
+}
+
+@keyframes gradient {
+  0%,
+  100% {
+    background-position: 77% 0%;
+  }
+  25%,
+  75% {
+    background-position: 33% 49%;
+  }
+  50% {
+    background-position: 24% 100%;
+  }
+}
+
+/* 000 _ main */
+
+main {
+  margin: 1.5rem;
+  max-width: 1700px;
+  width: 100%;
+}
+
+.container__Title {
+  color: var(--DM-Black);
+  display: block;
+  font-size: calc(var(--font-size) * 2);
+  font-weight: 700;
+  text-align: center;
+}
+
+/* 001 _ container */
+
+#container {
+  aspect-ratio: 2 / 1;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+/* 002 _ container__Personal-Info */
+
+#container__Personal-Info {
+  align-items: center;
+  backdrop-filter: blur(15px);
+  background: linear-gradient(
+    var(--gradient_angle),
+    var(--bc_Personal-Info_001),
+    var(--bc_Personal-Info_002) 98%
+  );
+  border-radius: var(--border_radius);
+  display: grid;
+  grid-area: 1 / 1 / span 2 / span 2;
+  grid-template-rows: 5fr 1fr;
+  padding: 1rem;
+  place-items: center;
+  text-align: center;
+
+  &__Photo {
+    aspect-ratio: 1;
+    filter: var(--Personal-Info__photo);
+    height: -webkit-fill-available;
+    margin: 0.5rem;
+    position: relative;
+    transition: 0.3141s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+
+      & .Photo--Ruslan {
+        overflow: auto;
+        transform: scale(1.11) translateY(-5%);
+      }
+    }
+
+    & .Photo {
+      border-radius: 50%;
+      margin: 0 auto;
+      object-fit: fill;
+      position: absolute;
+      transition: 0.3141s ease-in-out;
+      width: auto;
+
+      &.Background {
+        aspect-ratio: 1 / 1.15;
+        background: transparent;
+        border-radius: 0 0 100vh 100vh;
+        bottom: 0;
+        overflow: hidden;
+        width: 100%;
+      }
+    }
+  }
+
+  &__Name {
+    align-items: center;
+    color: var(--DM-Black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & span:first-child {
+      font-size: calc(var(--font-size) * 1.25);
+      font-weight: 700;
+    }
+
+    & span:last-child {
+      font-size: calc(var(--font-size) * 0.7);
+    }
+  }
+
+  .Photo--Ruslan {
+    bottom: 0;
+  }
+}
+
+/* 003 _ container__Personal-Contacts */
+
+#container__Personal-Contacts {
+  align-items: center;
+  backdrop-filter: blur(15px);
+  background: linear-gradient(
+    var(--gradient_angle),
+    var(--bc_Personal-Info_001),
+    var(--bc_Personal-Info_002) 98%
+  );
+  border-radius: var(--border_radius);
+  display: flex;
+  grid-area: 3 / 1 / span 1 / span 2;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
+
+  & ul {
+    display: grid;
+    gap: 0.5rem;
+    list-style: none;
+    place-items: left;
+  }
+
+  & ul li {
+    flex-direction: row;
+    padding: 0.5rem;
+  }
+
+  & img {
+    filter: var(--DM-Filter);
+    object-fit: contain;
+    position: absolute;
+    transform: translate(-120%, -15%);
+    width: 5%;
+  }
+}
+
+/* 004 _ container__Soft-Skills */
+
+#container__Soft-Skills {
+  backdrop-filter: blur(15px);
+  background: linear-gradient(
+    var(--gradient_angle),
+    var(--bc_Personal-Info_001),
+    var(--bc_Personal-Info_002) 98%
+  );
+  border-radius: var(--border_radius);
+  grid-area: 4 / 3 / span 1 / span 2;
+  padding: 1rem;
+
+  & ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    list-style: none;
+
+    & li {
+      background: var(--bc_Soft-Skills_ch);
+      border-radius: calc(var(--border_radius) * 0.25);
+      color: var(--DM-White);
+      margin: 0.2rem;
+      padding: 0.1rem 0.4rem;
+      user-select: none;
+    }
+  }
+}
+
+/* 005 _ container__Education */
+
+#container__Education {
+  backdrop-filter: blur(15px);
+  background: linear-gradient(
+    var(--gradient_angle),
+    var(--bc_Personal-Info_001),
+    var(--bc_Personal-Info_002) 98%
+  );
+  border-radius: var(--border_radius);
+  display: grid;
+  grid-area: 1 / 3 / span 1 / span 2;
+  grid-template-rows: 30% 70%;
+  padding: 1rem;
+
+  & .container__Education-Container {
+    align-items: center;
+    background: var(--bc_Education_Univer);
+    border-radius: calc(var(--border_radius) * 0.5);
+    box-shadow: 0px 0px 15px 3px var(--bc_Education_Univer--boxshadow);
+    gap: 0.2rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 40% 35% 25%;
+    padding: 1rem;
+
+    & .container__Education-Container--Name {
+      border-bottom: 1px dashed var(--DM-Black);
+      font-size: var(--font-size);
+      font-weight: 700;
+      grid-area: 1 / 1 / 2 / span 2;
+      text-align: left;
+    }
+
+    & .container__Education-Container--Faculty {
+      font-size: calc(var(--font-size) * 0.8);
+      grid-area: 2 / 1 / span 1 / span 1;
+      font-style: italic;
+      font-weight: 700;
+    }
+
+    & .container__Education-Container--Period-of-study {
+      font-size: calc(var(--font-size) * 0.6);
+      grid-area: 3 / 1 / span 1 / span 1;
+    }
+
+    & img {
+      border-radius: 50%;
+      grid-area: 2 / 2 / span 2 / span 1;
+      margin: auto;
+      padding: 0.2rem;
+      width: 40%;
+    }
+  }
+}
+
+/* 006 _ container__Languages */
+
+#container__Languages {
+  backdrop-filter: blur(15px);
+  background: linear-gradient(
+    var(--gradient_angle),
+    var(--bc_Personal-Info_001),
+    var(--bc_Personal-Info_002) 98%
+  );
+  border-radius: var(--border_radius);
+  grid-area: 2 / 3 / span 1 / span 1;
+  padding: 1rem;
+
+  & ul {
+    font-size: calc(var(--font-size) * 0.8);
+    list-style: none;
+
+    & li {
+      align-items: center;
+      border-bottom: 1px solid var(--DM-Black);
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      padding: 0.15rem 0.15rem 0;
+      user-select: none;
+    }
+  }
+}
+
+/* 007 _ container__Links */
+
+#container__Links {
+  align-items: center;
+  backdrop-filter: blur(15px);
+  background: linear-gradient(
+    var(--gradient_angle),
+    var(--bc_Personal-Info_001),
+    var(--bc_Personal-Info_002) 98%
+  );
+  border-radius: var(--border_radius);
+  display: flex;
+  grid-area: 3 / 3 / span 1 / span 1;
+  justify-content: center;
+  padding: 0.5rem;
+  & .container__Links__section {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+    width: 100%;
+
+    & a {
+      filter: var(--DM-Filter);
+      transition: 0.314s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+/* 008 _ container__Technology */
+
+#container__Technology {
+  backdrop-filter: blur(15px);
+  background: linear-gradient(
+    var(--gradient_angle),
+    var(--bc_Personal-Info_001),
+    var(--bc_Personal-Info_002) 98%
+  );
+  border-radius: var(--border_radius);
+  grid-area: 2 / 4 / span 2 / span 1;
+  padding: 1rem;
+
+  & ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    list-style: none;
+
+    & li {
+      background: var(--bc_Technologies_ch);
+      border-radius: calc(var(--border_radius) * 0.25);
+      color: var(--DM-White);
+      margin: 0.2rem;
+      padding: 0.1rem 0.4rem;
+      user-select: none;
+    }
+  }
+}
+
+/* 009 _ container__Projects */
+
+#container__Projects {
+  backdrop-filter: blur(15px);
+  background: linear-gradient(
+    var(--gradient_angle),
+    var(--bc_Personal-Info_001),
+    var(--bc_Personal-Info_002) 98%
+  );
+  border-radius: var(--border_radius);
+  grid-area: 1 / 5 / span 3 / span 2;
+  padding: 1rem;
+
+  & .container__Projects--UnCont {
+    align-items: center;
+    background-color: var(--bc_Projects_ch);
+    border-radius: calc(var(--border_radius) * 0.5);
+    box-shadow: 0px 0px 25px 4px var(--bc_Technologies_ch--boxshadow);
+    color: var(--DM-Gray);
+    display: grid;
+    gap: 0.3rem;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 3fr 0.5fr 0.5fr;
+    padding: 0.75rem;
+
+    &__Name {
+      color: var(--DM-White);
+      font-weight: 700;
+      grid-area: 1 / 1 / span 1 / span 1;
+      text-align: left;
+    }
+
+    &__Description {
+      color: var(--DM-White);
+      display: -webkit-box;
+      font-size: calc(var(--font-size) * 0.8);
+      grid-area: 2 / 1 / span 1 / span 1;
+      -webkit-box-orient: vertical;
+    }
+
+    &__UsedTech {
+      font-size: calc(var(--font-size) * 0.7);
+      grid-area: 3 / 1 / span 1 / span 1;
+
+      & ul {
+        display: inline-flex;
+        flex-wrap: wrap;
+        list-style: none;
+
+        & li {
+          background: var(--bc_Technologies_ch);
+          border-radius: calc(var(--border_radius) * 0.25);
+          color: var(--DM-White);
+          margin: 0.2rem 0.2rem 0.2rem 0;
+          padding: 0.1rem 0.4rem 0.1rem;
+          user-select: none;
+        }
+      }
+    }
+
+    &__link--Links {
+      flex-wrap: wrap;
+      font-size: calc(var(--font-size) * 0.8);
+      display: flex;
+      gap: 0.1rem;
+      grid-area: 4 / 1 / span 1 / span 1;
+
+      & a {
+        background: var(--DM-White);
+        border-radius: calc(var(--border_radius) * 0.3);
+        color: var(--DM-Black);
+        padding: 0.1rem 0.4rem;
+      }
+    }
+
+    img {
+      --img_br-radius: 10px;
+
+      border: calc(var(--img_br-radius) / 3) solid var(--bc_button_001);
+      border-radius: var(--img_br-radius);
+      grid-area: 1 / 2 / span 4 / span 1;
+      margin: auto;
+      overflow: hidden;
+      position: relative;
+    }
+  }
+}
+
+/* 00X _ buttons */
+
+#buttons {
+  position: fixed;
+  inset: 0.25rem 0.25rem auto auto;
+
+  div {
+    background: linear-gradient(
+      var(--gradient_angle),
+      var(--bc_button_001),
+      var(--bc_button_002) 99%
+    );
+    border-radius: calc(var(--border_radius) * 0.3);
+    position: relative;
+
+    &::before {
+      --width-value: 1px;
+
+      background: var(--DM-Black);
+      content: "";
+      display: block;
+      height: var(--bt_center-line);
+      left: calc(50% - (var(--width-value) / 2));
+      position: absolute;
+      top: calc((100% - var(--bt_center-line)) / 2);
+      width: var(--width-value);
+    }
+
+    button {
+      aspect-ratio: 1 / 1;
+      background: transparent;
+      border: none;
+      color: var(--DM-Black);
+      font-size: calc(var(--font-size) * 0.8);
+      width: 35px;
+
+      &:first-child:hover {
+        cursor: pointer;
+      }
+    }
+
+    .buttons__Lang-choose {
+      border-top: none;
+      border-radius: 0 0 calc(var(--border_radius) * 0.3)
+        calc(var(--border_radius) * 0.3);
+      display: none;
+      font-size: calc(var(--font-size) * 0.8);
+      list-style: none;
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      transform: translateY(-5px);
+      transition: all 0.3s;
+    }
+
+    button:hover + .buttons__Lang-choose,
+    .buttons__Lang-choose:hover {
+      display: block;
+      opacity: 1;
+    }
+
+    .buttons__Lang-choose li {
+      align-items: center;
+      background: radial-gradient(
+        var(--bc_button_002),
+        var(--bc_button_001) 4%,
+        transparent 82%
+      );
+      aspect-ratio: 1 / 1;
+      display: flex;
+      justify-content: center;
+      opacity: 0.2;
+      user-select: none;
+      width: 28px;
+      transition: opacity 0.3s;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+/* footer */
+
+footer {
+  font-size: calc(var(--font-size) * 0.6);
+  padding: 0 1rem 0.25rem;
+  text-align: left;
+}
+
+/* Background staff */
+
+.background__circle {
+  animation: turning 30s infinite linear;
+  filter: var(--background-curcle);
+  inset: auto;
+  position: absolute;
+  z-index: -1;
+}
+
+@keyframes turning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* DARK THEME */
+
+body.darkmode {
+  --body-BC_001: #413f3f;
+  --body-BC_002: #1f1f1f;
+  --body-BC_003: #5e5555;
+
+  --background-curcle: invert(32%) sepia(7%) saturate(470%) hue-rotate(314deg)
+    brightness(97%) contrast(85%);
+  --bc_button_001: #43494a;
+  --bc_button_002: #4e555700;
+  --bc_Personal-Info_001: #2e2821af;
+  --bc_Personal-Info_002: #36363600;
+  --bc_Technologies_ch: #9a88cc;
+  --bc_Projects_ch: #3d443fd0;
+  --bc_Technologies_ch--boxshadow: #3d443f;
+  --bc_Soft-Skills_ch: #8398af;
+  --bc_Education_Univer: #997b448c;
+  --bc_Education_Univer--boxshadow: #787055;
+  --DM-Filter: invert(74%) sepia(2%) saturate(9%) hue-rotate(338deg)
+    brightness(103%) contrast(85%);
+  --DM-Gray: #868f99;
+  --DM-Black: #dacaca;
+  --DM-White: #131212;
+  --Personal-Info__photo: brightness(0.8);
+}
+
+@import "components/responsive";
