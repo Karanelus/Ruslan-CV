@@ -4,6 +4,7 @@ Hey, my name is Rusłan, and i'm really love coding, perhaps opened it only half
 
 https://karanelus.github.io/Ruslan-CV/
 
+![readme_screen](https://user-images.githubusercontent.com/113471991/234370855-021200bb-6bf3-4875-94bf-2b08d8fecbc5.png)
+
 # Khown problems
 1) JS folder are unseen on GH Pages
-2) Bad response on mobile devise
