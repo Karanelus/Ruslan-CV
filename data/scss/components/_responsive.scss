@@ -83,7 +83,7 @@
 
   #container {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1fr);
+    grid-template-rows: 0fr;
   }
 
   /* 002 _ container__Personal-Info */
