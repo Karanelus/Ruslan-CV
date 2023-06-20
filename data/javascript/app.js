@@ -1,4 +1,4 @@
-import languageData from "./LanguageData.json" assert { type: "json" };
+import languageData from "./language.json" assert { type: "json" };
 
 const ligthMode_button = document.querySelector("#buttons__lightMode");
 const language_button = document.querySelector("button#buttons__Language");
@@ -6,6 +6,8 @@ const languageText_selector = document.querySelector(".buttons__Lang-choose");
 let theme = localStorage.getItem("theme");
 let Language = localStorage.getItem("Language");
 let LanguageOptions = ["GB", "PL", "BY"];
+
+console.log(languageData);
 
 // DARKMODE
 
