@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Ruslan-CV-v2/static/css/main.60daedab.css",
-    "main.js": "/Ruslan-CV-v2/static/js/main.bbd598ec.js",
+    "main.js": "/Ruslan-CV-v2/static/js/main.b34a4901.js",
     "index.html": "/Ruslan-CV-v2/index.html",
     "main.60daedab.css.map": "/Ruslan-CV-v2/static/css/main.60daedab.css.map",
-    "main.bbd598ec.js.map": "/Ruslan-CV-v2/static/js/main.bbd598ec.js.map"
+    "main.b34a4901.js.map": "/Ruslan-CV-v2/static/js/main.b34a4901.js.map"
   },
   "entrypoints": [
     "static/css/main.60daedab.css",
-    "static/js/main.bbd598ec.js"
+    "static/js/main.b34a4901.js"
   ]
 }
