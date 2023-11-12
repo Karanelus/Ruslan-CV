@@ -13,7 +13,7 @@ const CvNavigation = () => {
     >
       <ul className=" list-none flex flex-row gap-8">
         <li className=" md:cursor-pointer md:ease-in-out md:duration-150 md:font-bold md:text-gray-500 md:hover:text-gray-950 font-bold">
-          <Link to="/Ruslan-CV-v2">About</Link>
+          <Link to="/Ruslan-CV">About</Link>
         </li>
         <li className=" md:cursor-pointer md:ease-in-out md:duration-150 md:font-bold md:text-gray-500 md:hover:text-gray-950 font-bold">
           <Link to="/karaniewskiportfolio">Portfolio</Link>

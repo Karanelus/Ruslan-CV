@@ -36,7 +36,7 @@ const CvRender = () => {
       <CvButtonBurgerMenu />
       <main className="flex justify-start flex-col items-center px-4">
         <Routes>
-          <Route index path="/Ruslan-CV-v2" element={<CvAboutSectionsRender />} />
+          <Route index path="/Ruslan-CV" element={<CvAboutSectionsRender />} />
           <Route path="/karaniewskiportfolio" element={<CvPortfolioSectionRender />} />
           <Route path="/karaniewskicontact" element={<CvContactSectionRender />} />
         </Routes>
