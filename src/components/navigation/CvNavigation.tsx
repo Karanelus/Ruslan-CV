@@ -1,18 +1,8 @@
-// import { useState } from "react";
 import { useCvRuslanContext } from "../../context/CvRuslanContext";
 import { Link } from "react-router-dom";
 
 const CvNavigation = () => {
   const { navpanelRef, isBurgerMenuOpen } = useCvRuslanContext();
-  // const [isDeviseMobile, setIsDeviseMobile] = useState<boolean>();
-
-  // const useAgentProver = () => {
-  //   if (userAgent.match(/Mobile/i) || userAgent.match(/Tablet/i)) {
-  //     setIsDeviseMobile(true);
-  //   } else {
-  //     setIsDeviseMobile(false);
-  //   }
-  // };
 
   return (
     <nav
@@ -23,7 +13,7 @@ const CvNavigation = () => {
     >
       <ul className=" list-none flex flex-row gap-8">
         <li className=" md:cursor-pointer md:ease-in-out md:duration-150 md:font-bold md:text-gray-500 md:hover:text-gray-950 font-bold">
-          <Link to="/">About</Link>
+          <Link to="/Ruslan-CV-v2">About</Link>
         </li>
         <li className=" md:cursor-pointer md:ease-in-out md:duration-150 md:font-bold md:text-gray-500 md:hover:text-gray-950 font-bold">
           <Link to="/karaniewskiportfolio">Portfolio</Link>
