@@ -1,10 +1,23 @@
+
 # Ruslan-CV
 
-Hey, my name is Rusłan, and i'm really love coding, perhaps opened it only halfyear ago. Here iss my peronal CV for the future work, projects and other usefull staff. Here also u can contact with me with help of links in CV. So, without feather interraptions, enjoy my CV and will be really happy for contact/feedback.
+Hey, my name is Rusłan, and i'm really in love with coding, perhaps opened it only a few months ago. Here is my personal CV for future work, projects and other useful info about me. Also, you can contact me with the help of links on my CV. So, without further interruptions, enjoy my page and I'll be really happy to contact/feedback.
 
-https://karanelus.github.io/Ruslan-CV/
+## Screenshots
 
 ![readme_screen](https://user-images.githubusercontent.com/113471991/234370855-021200bb-6bf3-4875-94bf-2b08d8fecbc5.png)
 
-# Khown problems
-1) JS folder are unseen on GH Pages
+## Techstack
+
+1. React
+2. TypeScript
+3. TailwindCSS
+
+
+## Link to page
+
+https://karanelus.github.io/Ruslan-CV/
+
+#### Known proproblem 
+
+Images are not loaded from unknow reason
