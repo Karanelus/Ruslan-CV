@@ -1,6 +1,12 @@
 
 # Ruslan-CV
 
+### Link to page
+
+https://karanelus.github.io/Ruslan-CV/
+
+## About page
+
 Hey, my name is Rusłan, and i'm really in love with coding, perhaps opened it only a few months ago. Here is my personal CV for future work, projects and other useful info about me. Also, you can contact me with the help of links on my CV. So, without further interruptions, enjoy my page and I'll be really happy to contact/feedback.
 
 ## Screenshots
@@ -12,11 +18,6 @@ Hey, my name is Rusłan, and i'm really in love with coding, perhaps opened it o
 1. React
 2. TypeScript
 3. TailwindCSS
-
-
-## Link to page
-
-https://karanelus.github.io/Ruslan-CV/
 
 #### Known proproblem 
 
