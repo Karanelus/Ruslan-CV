@@ -24,7 +24,7 @@ module.exports = {
         h3Size_md: ["2rem", "2.375rem"],
         h3Size_sm: ["1.75rem", "1.875rem"],
         pSize: ["1.5rem", "1.875rem"],
-        pSize_md: ["1.175rem", "1.375rem"],
+        pSize_md: ["1.275rem", "1.375rem"],
         pSize_sm: ["1rem", "1.0625rem"],
       },
       keyframes: {

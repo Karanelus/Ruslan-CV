@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useCvRuslanContext } from "../context/CvRuslanContext";
 import CvButtonBurgerMenu from "../extention/CvButtonBurgerMenu";
 import CvButtonScreenUp from "../extention/CvButtonScreenUp";
@@ -12,22 +13,23 @@ import { Routes, Route } from "react-router-dom";
 const CvRender = () => {
   const { setIsMobileScreenDown } = useCvRuslanContext();
 
-  const sizeProver = () => {
-    if (window.innerWidth < 600 && window.scrollY > 50) {
-      setIsMobileScreenDown(true);
-    } else {
-      setIsMobileScreenDown(false);
-    }
-  };
+  useEffect(() => {
+    const sizeProver = () => {
+      if (window.innerWidth < 600 && window.scrollY > 50) {
+        setIsMobileScreenDown(true);
+      } else {
+        setIsMobileScreenDown(false);
+      }
+    };
 
-  sizeProver();
-
-  window.addEventListener("resize", () => {
     sizeProver();
-  });
-  window.addEventListener("scroll", () => {
-    sizeProver();
-  });
+    window.addEventListener("resize", sizeProver);
+    window.addEventListener("scroll", sizeProver);
+    return () => {
+      window.removeEventListener("resize", sizeProver);
+      window.removeEventListener("scroll", sizeProver);
+    };
+  }, [setIsMobileScreenDown]);
 
   return (
     <>

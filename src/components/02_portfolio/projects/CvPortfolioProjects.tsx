@@ -8,53 +8,47 @@ const CvPortfolioProjects = () => {
     useCvRuslanContext();
   const [isClicked, setIsClicked] = useState<boolean>(false);
 
-  const onClickLeft = () => {
+  const onClickArrow = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const aboutProject = aboutProjectRef.current;
+    const imageProject = imageProjectRef.current;
+    const buttonProve = e.currentTarget?.value;
     if (isClicked === false) {
-      const aboutProject = aboutProjectRef.current;
-      const imageProject = imageProjectRef.current;
-
-      setIsClicked(true);
-      imageProject?.classList.add("translate-y-[-0.25rem]", "opacity-0", "delay-200");
-      aboutProject?.classList.add("translate-y-[-0.25rem]", "opacity-0");
-      imageProject?.addEventListener(
-        "transitionend",
-        () => {
-          if (portfolioChecking.projectNum === 1) {
-            setPortfolioChecking({ ...portfolioChecking, projectNum: 4 });
-          } else {
-            setPortfolioChecking({ ...portfolioChecking, projectNum: portfolioChecking.projectNum - 1 });
-          }
-          aboutProject?.classList.remove("translate-y-[-0.25rem]", "opacity-0");
-          imageProject?.classList.remove("translate-y-[-0.25rem]", "opacity-0", "delay-200");
-          setIsClicked(false);
-        },
-        { once: true }
-      );
-    } else return;
-  };
-
-  const onClickRight = () => {
-    if (isClicked === false) {
-      const aboutProject = aboutProjectRef.current;
-      const imageProject = imageProjectRef.current;
-
       setIsClicked(true);
       imageProject?.classList.add("translate-y-[-0.25rem]", "opacity-0");
-      aboutProject?.classList.add("translate-y-[-0.25rem]", "opacity-0", "delay-200");
-      aboutProject?.addEventListener(
-        "transitionend",
-        () => {
-          if (portfolioChecking.projectNum === projectsContainer.length) {
-            setPortfolioChecking({ ...portfolioChecking, projectNum: 1 });
-          } else {
-            setPortfolioChecking({ ...portfolioChecking, projectNum: portfolioChecking.projectNum + 1 });
-          }
-          imageProject?.classList.remove("translate-y-[-0.25rem]", "opacity-0");
-          aboutProject?.classList.remove("translate-y-[-0.25rem]", "opacity-0", "delay-200");
-          setIsClicked(false);
-        },
-        { once: true }
-      );
+      aboutProject?.classList.add("translate-y-[-0.25rem]", "opacity-0");
+      if (buttonProve === "left") {
+        imageProject?.classList.add("delay-200");
+        imageProject?.addEventListener(
+          "transitionend",
+          () => {
+            if (portfolioChecking.projectNum === 1) {
+              setPortfolioChecking({ ...portfolioChecking, projectNum: 4 });
+            } else {
+              setPortfolioChecking({ ...portfolioChecking, projectNum: portfolioChecking.projectNum - 1 });
+            }
+            aboutProject?.classList.remove("translate-y-[-0.25rem]", "opacity-0");
+            imageProject?.classList.remove("translate-y-[-0.25rem]", "opacity-0", "delay-200");
+            setIsClicked(false);
+          },
+          { once: true }
+        );
+      } else if (buttonProve === "right") {
+        aboutProject?.classList.add("delay-200");
+        aboutProject?.addEventListener(
+          "transitionend",
+          () => {
+            if (portfolioChecking.projectNum === projectsContainer.length) {
+              setPortfolioChecking({ ...portfolioChecking, projectNum: 1 });
+            } else {
+              setPortfolioChecking({ ...portfolioChecking, projectNum: portfolioChecking.projectNum + 1 });
+            }
+            imageProject?.classList.remove("translate-y-[-0.25rem]", "opacity-0");
+            aboutProject?.classList.remove("translate-y-[-0.25rem]", "opacity-0", "delay-200");
+            setIsClicked(false);
+          },
+          { once: true }
+        );
+      }
     } else return;
   };
 
@@ -66,13 +60,15 @@ const CvPortfolioProjects = () => {
           <CvPortfolioImage />
           <CvPortfolioAbout />
           <button
-            onClick={onClickLeft}
+            onClick={onClickArrow}
+            value="left"
             className="aspect-square grid place-items-center rounded-md bg-orange-200 h-7 absolute top-2/4 translate-y-[-50%] hover:translate-y-[calc(-50%-0.25rem)] translate-x-[-50%] duration-150 hover:shadow-buttonShadow hover:bg-orange-400 active:scale-90"
           >
             <img src="/img/pluggins/arrow.svg" alt="Arrow left" className="rotate-180" />
           </button>
           <button
-            onClick={onClickRight}
+            onClick={onClickArrow}
+            value="right"
             className="aspect-square grid place-items-center rounded-md bg-orange-200 h-7 absolute top-2/4 translate-y-[-50%] hover:translate-y-[calc(-50%-0.25rem)] translate-x-[50%] duration-150 hover:shadow-buttonShadow hover:bg-orange-400 right-0 active:scale-90"
           >
             <img src="/img/pluggins/arrow.svg" alt="Arrow rigth" />
