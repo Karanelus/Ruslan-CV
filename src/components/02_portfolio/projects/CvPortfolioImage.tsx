@@ -10,7 +10,10 @@ const CvPortfolioImage = () => {
   return (
     <div ref={imageProjectRef} className="duration-200 aspect-project py-2 px-4 relative">
       <img
-        src={`/img/02_portfolio/project_${portfolioChecking.projectNum}/img${portfolioChecking.projectPhoto}.png`}
+        src={
+          process.env.PUBLIC_URL +
+          `/img/02_portfolio/project_${portfolioChecking.projectNum}/img${portfolioChecking.projectPhoto}.png`
+        }
         alt=""
         className=" rounded-lg w-full"
       />

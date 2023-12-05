@@ -64,14 +64,14 @@ const CvPortfolioProjects = () => {
             value="left"
             className="aspect-square grid place-items-center rounded-md bg-orange-200 h-7 absolute top-2/4 translate-y-[-50%] hover:translate-y-[calc(-50%-0.25rem)] translate-x-[-50%] duration-150 hover:shadow-buttonShadow hover:bg-orange-400 active:scale-90"
           >
-            <img src="/img/pluggins/arrow.svg" alt="Arrow left" className="rotate-180" />
+            <img src={process.env.PUBLIC_URL + "/img/pluggins/arrow.svg"} alt="Arrow left" className="rotate-180" />
           </button>
           <button
             onClick={onClickArrow}
             value="right"
             className="aspect-square grid place-items-center rounded-md bg-orange-200 h-7 absolute top-2/4 translate-y-[-50%] hover:translate-y-[calc(-50%-0.25rem)] translate-x-[50%] duration-150 hover:shadow-buttonShadow hover:bg-orange-400 right-0 active:scale-90"
           >
-            <img src="/img/pluggins/arrow.svg" alt="Arrow rigth" />
+            <img src={process.env.PUBLIC_URL + "/img/pluggins/arrow.svg"} alt="Arrow rigth" />
           </button>
         </section>
       </div>
