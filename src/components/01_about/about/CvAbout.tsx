@@ -6,7 +6,7 @@ const CvAbout = () => {
       </p>
       <p data-with-indent>
         I'm Rusłan Karaniewski, who's way in programming only started, but I'm going on with head held high. All my life
-        I worked and seen myself like creator: mapmaking for WarCarft 3 and Space Rangers, studding landscape design and
+        I worked and seen myself like creator: mapmaking for WarCraft 3 and Space Rangers, studding landscape design and
         always thinking, that a good idea from mine realization can make life of people better.
       </p>
       <p data-with-indent>
