@@ -21,7 +21,3 @@ the help of links on my CV. So, without further interruptions, enjoy my page and
 1. React
 2. TypeScript
 3. TailwindCSS
-
-#### Known proproblem 
-
-Images are not loaded from unknow reason
