@@ -2,7 +2,7 @@ import CvContactLink from "./contactLink/CvContactLink";
 
 const CvContactSectionRender = () => {
   return (
-    <div className=" bg-orange-200 rounded-lg px-4 py-8 w-section md:mb-12 mb-8 animate-opening">
+    <div className="mb-8 w-section animate-opening rounded-lg bg-orange-200 px-4 py-8 md:mb-12">
       <CvContactLink />
     </div>
   );

@@ -36,11 +36,17 @@ const CvRender = () => {
       <CvNavigation />
       <CvHeader />
       <CvButtonBurgerMenu />
-      <main className="flex justify-start flex-col items-center px-4">
+      <main className="flex flex-col items-center justify-start px-4">
         <Routes>
           <Route index path="/Ruslan-CV" element={<CvAboutSectionsRender />} />
-          <Route path="/karaniewskiportfolio" element={<CvPortfolioSectionRender />} />
-          <Route path="/karaniewskicontact" element={<CvContactSectionRender />} />
+          <Route
+            path="/karaniewskiportfolio"
+            element={<CvPortfolioSectionRender />}
+          />
+          <Route
+            path="/karaniewskicontact"
+            element={<CvContactSectionRender />}
+          />
         </Routes>
       </main>
       <CvFooter />

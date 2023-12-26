@@ -39,7 +39,9 @@ type CvRuslanContextContainerProps = {
   userAgent: string;
 };
 
-const CvRuslanContextContainer = createContext({} as CvRuslanContextContainerProps);
+const CvRuslanContextContainer = createContext(
+  {} as CvRuslanContextContainerProps,
+);
 
 export const useCvRuslanContext = () => {
   return useContext(CvRuslanContextContainer);
@@ -52,10 +54,13 @@ const CvRuslanContext = ({ children }: CvRuslanContextProps) => {
   const [isMobileScreenDown, setIsMobileScreenDown] = useState(true);
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(true);
   const userAgent = window.navigator.userAgent;
-  const [portfolioChecking, setPortfolioChecking] = useLocalStorage<CvPotfolio>("portfolioChecking", {
-    projectNum: 1,
-    projectPhoto: 1,
-  });
+  const [portfolioChecking, setPortfolioChecking] = useLocalStorage<CvPotfolio>(
+    "portfolioChecking",
+    {
+      projectNum: 1,
+      projectPhoto: 1,
+    },
+  );
   const projectsContainer: CvProjectType[] = project;
 
   return (

@@ -1,10 +1,10 @@
 const CvContactLink = () => {
   return (
     <>
-      <h2 className=" text-center">Contact with me</h2>
-      <ul className="grid lg:grid-cols-4 grid-cols-2 lg:gap-4 gap-2">
+      <h2 className="text-center">Contact with me</h2>
+      <ul className="grid grid-cols-2 gap-2 lg:grid-cols-4 lg:gap-4">
         <a
-          className="rounded-lg bg-orange-50 hover:bg-[#0a66c2] p-2 cursor-pointer hover:text-white duration-150 text-center hover:translate-y-[-0.25rem] hover:shadow-buttonShadow"
+          className="cursor-pointer rounded-lg bg-orange-50 p-2 text-center duration-150 hover:translate-y-[-0.25rem] hover:bg-[#0a66c2] hover:text-white hover:shadow-buttonShadow"
           href="https://www.linkedin.com/in/karanelus/"
           target="_blank"
           rel="noreferrer"
@@ -12,7 +12,7 @@ const CvContactLink = () => {
           LinkedIn
         </a>
         <a
-          className="rounded-lg bg-orange-50 hover:bg-[#0D1117] p-2 cursor-pointer hover:text-white duration-150 text-center hover:translate-y-[-0.25rem] hover:shadow-buttonShadow"
+          className="cursor-pointer rounded-lg bg-orange-50 p-2 text-center duration-150 hover:translate-y-[-0.25rem] hover:bg-[#0D1117] hover:text-white hover:shadow-buttonShadow"
           href="https://github.com/Karanelus"
           target="_blank"
           rel="noreferrer"
@@ -20,7 +20,7 @@ const CvContactLink = () => {
           GitHub
         </a>
         <a
-          className="rounded-lg bg-orange-50 hover:bg-[#28A8EA] p-2 cursor-pointer hover:text-white duration-150 text-center hover:translate-y-[-0.25rem] hover:shadow-buttonShadow"
+          className="cursor-pointer rounded-lg bg-orange-50 p-2 text-center duration-150 hover:translate-y-[-0.25rem] hover:bg-[#28A8EA] hover:text-white hover:shadow-buttonShadow"
           href="https://t.me/Karane1us"
           target="_blank"
           rel="noreferrer"
@@ -28,7 +28,7 @@ const CvContactLink = () => {
           Telegram
         </a>
         <a
-          className="rounded-lg bg-orange-50 hover:bg-[#5562EA] p-2 cursor-pointer hover:text-white duration-150 text-center hover:translate-y-[-0.25rem] hover:shadow-buttonShadow"
+          className="cursor-pointer rounded-lg bg-orange-50 p-2 text-center duration-150 hover:translate-y-[-0.25rem] hover:bg-[#5562EA] hover:text-white hover:shadow-buttonShadow"
           href="https://www.discordapp.com/users/Karanelus#7672"
           target="_blank"
           rel="noreferrer"

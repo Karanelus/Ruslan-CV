@@ -11,10 +11,14 @@ const CvButtonScreenUp = () => {
     <div
       onClick={onClickToTop}
       className={`duration-150 ${
-        isMobileScreenDown ? "opacity-100" : "opacity-0 pointer-events-none"
-      } cursor-pointer aspect-square grid place-items-center fixed w-10 rounded-lg rotate-90 bg-orange-300 bottom-4 right-8 active:scale-75 active:bg-orange-400`}
+        isMobileScreenDown ? "opacity-100" : "pointer-events-none opacity-0"
+      } fixed bottom-4 right-8 grid aspect-square w-10 rotate-90 cursor-pointer place-items-center rounded-lg bg-orange-300 active:scale-75 active:bg-orange-400`}
     >
-      <img src={process.env.PUBLIC_URL + "/img/pluggins/screenUp.svg"} alt="" className=" w-3/4" />
+      <img
+        src={process.env.PUBLIC_URL + "/img/pluggins/screenUp.svg"}
+        alt=""
+        className=" w-3/4"
+      />
     </div>
   );
 };
