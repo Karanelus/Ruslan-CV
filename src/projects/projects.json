@@ -46,5 +46,17 @@
     },
     "linkLive": "https://karanelus.github.io/Giard-Design-page/",
     "linkRepo": "https://github.com/Karanelus/Giard-Design-page"
+  },
+  {
+    "id": 5,
+    "nameOfProject": "Family Budget App",
+    "about": "Application for counting family income, fixed fees, and creating full information in diagram and tables way",
+    "img": {
+      "num_1": "/img/02_portfolio/project_5/img1.png",
+      "num_2": "/img/02_portfolio/project_5/img2.png",
+      "num_3": "/img/02_portfolio/project_5/img3.png"
+    },
+    "linkLive": "https://karanelus.github.io/Family-budget-app/",
+    "linkRepo": "https://github.com/Karanelus/Family-budget-app"
   }
 ]

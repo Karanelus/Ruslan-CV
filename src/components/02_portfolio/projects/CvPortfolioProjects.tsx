@@ -22,7 +22,7 @@ const CvPortfolioProjects = () => {
           "transitionend",
           () => {
             if (portfolioChecking.projectNum === 1) {
-              setPortfolioChecking({ ...portfolioChecking, projectNum: 4 });
+              setPortfolioChecking({ ...portfolioChecking, projectNum: projectsContainer.length });
             } else {
               setPortfolioChecking({ ...portfolioChecking, projectNum: portfolioChecking.projectNum - 1 });
             }
