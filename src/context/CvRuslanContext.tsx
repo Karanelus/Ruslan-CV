@@ -1,28 +1,14 @@
 import { useContext, useRef, createContext, ReactNode, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
-import project from "../projects/projects.json";
-import useLocalStorage from "../hooks/useLocalStorage";
+import useLocalStorage from "../hooks/useLocalStorage.hook";
 
 type CvRuslanContextProps = {
   children: ReactNode;
 };
 
-type CvProjectType = {
-  id: number;
-  nameOfProject: string;
-  about: string;
-  img: {
-    num_1: string;
-    num_2: string;
-    num_3: string;
-  };
-  linkLive: string;
-  linkRepo: string;
-};
-
 export type CvPotfolio = {
   projectNum: number;
-  projectPhoto: number;
+  projectPhoto: string;
 };
 
 type CvRuslanContextContainerProps = {
@@ -35,7 +21,6 @@ type CvRuslanContextContainerProps = {
   setIsBurgerMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
   portfolioChecking: CvPotfolio;
   setPortfolioChecking: (value: CvPotfolio) => void;
-  projectsContainer: CvProjectType[];
   userAgent: string;
 };
 
@@ -58,10 +43,9 @@ const CvRuslanContext = ({ children }: CvRuslanContextProps) => {
     "portfolioChecking",
     {
       projectNum: 1,
-      projectPhoto: 1,
+      projectPhoto: "1",
     },
   );
-  const projectsContainer: CvProjectType[] = project;
 
   return (
     <CvRuslanContextContainer.Provider
@@ -75,7 +59,6 @@ const CvRuslanContext = ({ children }: CvRuslanContextProps) => {
         setIsBurgerMenuOpen,
         portfolioChecking,
         setPortfolioChecking,
-        projectsContainer,
         userAgent,
       }}
     >

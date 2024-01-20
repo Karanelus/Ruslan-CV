@@ -7,27 +7,35 @@
 p,
 li,
 a {
-  @apply 2xl:text-pSize lg:text-pSize_md text-pSize_sm;
+  @apply text-pSize_sm lg:text-pSize_md 2xl:text-pSize;
 }
 
 p[data-with-indent] {
-  @apply indent-6 text-justify;
+  @apply text-justify indent-6;
 }
 
 h1 {
-  @apply 2xl:text-h1Size lg:text-h1Size_md text-h1Size_sm;
+  @apply text-h1Size_sm lg:text-h1Size_md 2xl:text-h1Size;
 }
 
 h2 {
-  @apply 2xl:text-h2Size lg:text-h2Size_md text-h2Size_sm md:my-4 my-1 text-center;
+  @apply my-1 text-center text-h2Size_sm md:my-4 lg:text-h2Size_md 2xl:text-h2Size;
 }
 
 h3 {
-  @apply 2xl:text-h3Size lg:text-h3Size_md text-h3Size_sm text-center;
+  @apply text-center text-h3Size_sm lg:text-h3Size_md 2xl:text-h3Size;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+[value="right"] {
+  right: 0;
+}
+
+[alt="Arrow left"] {
+  rotate: 180deg;
 }
 
 #root {

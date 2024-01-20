@@ -11,7 +11,7 @@ module.exports = {
         project: "3 / 2",
       },
       boxShadow: {
-        buttonShadow: "0 0.25rem 0.25rem 0 #4a4a4af1",
+        buttonShadow: "0 0.25rem 0.25rem 0 #878787c5",
       },
       fontSize: {
         h1Size: ["5rem", "5.5rem"],

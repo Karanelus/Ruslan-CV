@@ -1,21 +1,21 @@
 import { useEffect } from "react";
 import { useCvRuslanContext } from "../context/CvRuslanContext";
-import CvButtonBurgerMenu from "../extention/CvButtonBurgerMenu";
-import CvButtonScreenUp from "../extention/CvButtonScreenUp";
-import CvHeader from "./00_header/CvHeader";
-import CvAboutSectionsRender from "./01_about/CvAboutSectionsRender";
-import CvPortfolioSectionRender from "./02_portfolio/CvPortfolioSectionRender";
-import CvContactSectionRender from "./03_contact/CvContactSectionRender";
-import CvFooter from "./04_footer/CvFooter";
-import CvNavigation from "./navigation/CvNavigation";
 import { Routes, Route } from "react-router-dom";
+import Navigation from "./Navigation/Navigation";
+import Header from "./Header/Header";
+import ButtonBurgerMenu from "../mobileVersionButton/ButtonBurgerMenu";
+import About from "./About/About";
+import Portfolio from "./Portfolio/Portfolio";
+import Contact from "./Contact/Contact";
+import ButtonScreenUp from "../mobileVersionButton/ButtonScreenUp";
+import Footer from "./Footer/Footer";
 
 const CvRender = () => {
   const { setIsMobileScreenDown } = useCvRuslanContext();
 
   useEffect(() => {
     const sizeProver = () => {
-      if (window.innerWidth < 600 && window.scrollY > 50) {
+      if (window.innerWidth < 840 && window.scrollY > 50) {
         setIsMobileScreenDown(true);
       } else {
         setIsMobileScreenDown(false);
@@ -33,24 +33,18 @@ const CvRender = () => {
 
   return (
     <>
-      <CvNavigation />
-      <CvHeader />
-      <CvButtonBurgerMenu />
+      <Navigation />
+      <Header />
+      <ButtonBurgerMenu />
       <main className="flex flex-col items-center justify-start px-4">
         <Routes>
-          <Route index path="/Ruslan-CV" element={<CvAboutSectionsRender />} />
-          <Route
-            path="/karaniewskiportfolio"
-            element={<CvPortfolioSectionRender />}
-          />
-          <Route
-            path="/karaniewskicontact"
-            element={<CvContactSectionRender />}
-          />
+          <Route index path="/Ruslan-CV" element={<About />} />
+          <Route path="/karaniewskiportfolio" element={<Portfolio />} />
+          <Route path="/karaniewskicontact" element={<Contact />} />
         </Routes>
       </main>
-      <CvFooter />
-      <CvButtonScreenUp />
+      <ButtonScreenUp />
+      <Footer />
     </>
   );
 };
