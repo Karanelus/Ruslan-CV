@@ -1,4 +1,4 @@
-import { useCvRuslanContext } from "../../../context/CvRuslanContext";
+import { useRuslanContext } from "../../../context/RuslanContext";
 import styles from "../Portfolio.styles";
 
 type Props = {
@@ -7,7 +7,7 @@ type Props = {
 };
 
 const PortfolioImageCheck = ({ onClickSetPhoto, id }: Props) => {
-  const { portfolioChecking } = useCvRuslanContext();
+  const { portfolioChecking } = useRuslanContext();
 
   const isIdMatches = portfolioChecking.projectPhoto === id;
   const sectionStyleShortcut =

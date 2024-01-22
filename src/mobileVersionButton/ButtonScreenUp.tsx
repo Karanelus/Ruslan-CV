@@ -1,8 +1,8 @@
-import { useCvRuslanContext } from "../context/CvRuslanContext";
+import { useRuslanContext } from "../context/RuslanContext";
 import styles from "./MobileVersionButton.styles";
 
 const ButtonScreenUp = () => {
-  const { isMobileScreenDown } = useCvRuslanContext();
+  const { isMobileScreenDown } = useRuslanContext();
 
   const onClickToTop = () => {
     document.documentElement.scrollTop = 0;

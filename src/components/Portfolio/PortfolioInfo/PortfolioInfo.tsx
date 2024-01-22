@@ -1,10 +1,10 @@
-import { useCvRuslanContext } from "../../../context/CvRuslanContext";
+import { useRuslanContext } from "../../../context/RuslanContext";
 import portfolioData from "../Portfolio.data";
 import styles from "../Portfolio.styles";
 import PortfolioInfoLinkButton from "./PortfolioInfoLinkButton";
 
 const PortfolioInfo = () => {
-  const { aboutProjectRef, portfolioChecking } = useCvRuslanContext();
+  const { aboutProjectRef, portfolioChecking } = useRuslanContext();
 
   const projectInfo = portfolioData.projects;
   const showedProject = projectInfo.find(

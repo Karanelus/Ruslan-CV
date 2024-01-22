@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useCvRuslanContext } from "../context/CvRuslanContext";
+import { useRuslanContext } from "../context/RuslanContext";
 import { Routes, Route } from "react-router-dom";
 import Navigation from "./Navigation/Navigation";
 import Header from "./Header/Header";
@@ -10,8 +10,8 @@ import Contact from "./Contact/Contact";
 import ButtonScreenUp from "../mobileVersionButton/ButtonScreenUp";
 import Footer from "./Footer/Footer";
 
-const CvRender = () => {
-  const { setIsMobileScreenDown } = useCvRuslanContext();
+const Render = () => {
+  const { setIsMobileScreenDown } = useRuslanContext();
 
   useEffect(() => {
     const sizeProver = () => {
@@ -49,4 +49,4 @@ const CvRender = () => {
   );
 };
 
-export default CvRender;
+export default Render;

@@ -1,10 +1,10 @@
-import { useCvRuslanContext } from "../../context/CvRuslanContext";
+import { useRuslanContext } from "../../context/RuslanContext";
 import styles from "./Navigation.styles";
 import { menuOptions } from "./Navigation.data";
 import NavigationLink from "./NavigationLink";
 
 const Navigation = () => {
-  const { navpanelRef, isBurgerMenuOpen } = useCvRuslanContext();
+  const { navpanelRef, isBurgerMenuOpen } = useRuslanContext();
 
   const styleNavigation = `${styles.navigation} ${
     isBurgerMenuOpen ? null : "-translate-y-screenOutY"

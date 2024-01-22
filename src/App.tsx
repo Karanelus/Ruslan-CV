@@ -1,11 +1,11 @@
-import CvRender from "./components/CvRender";
-import CvRuslanContext from "./context/CvRuslanContext";
+import Render from "./components/Render";
+import RuslanContext from "./context/RuslanContext";
 
 const App = () => {
   return (
-    <CvRuslanContext>
-      <CvRender />
-    </CvRuslanContext>
+    <RuslanContext>
+      <Render />
+    </RuslanContext>
   );
 };
 

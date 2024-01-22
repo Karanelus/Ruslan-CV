@@ -28,11 +28,11 @@ const CvRuslanContextContainer = createContext(
   {} as CvRuslanContextContainerProps,
 );
 
-export const useCvRuslanContext = () => {
+export const useRuslanContext = () => {
   return useContext(CvRuslanContextContainer);
 };
 
-const CvRuslanContext = ({ children }: CvRuslanContextProps) => {
+const RuslanContext = ({ children }: CvRuslanContextProps) => {
   const aboutProjectRef = useRef<HTMLDivElement>(null);
   const navpanelRef = useRef<HTMLElement>(null);
   const imageProjectRef = useRef<HTMLDivElement>(null);
@@ -67,4 +67,4 @@ const CvRuslanContext = ({ children }: CvRuslanContextProps) => {
   );
 };
 
-export default CvRuslanContext;
+export default RuslanContext;

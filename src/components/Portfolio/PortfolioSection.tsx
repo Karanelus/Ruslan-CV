@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useCvRuslanContext } from "../../context/CvRuslanContext";
+import { useRuslanContext } from "../../context/RuslanContext";
 import PortfolioSectionButton from "./PortfolioSectionButton";
 import styles from "./Portfolio.styles";
 import portfolioData from "./Portfolio.data";
@@ -12,7 +12,7 @@ const PortfolioSection = () => {
     imageProjectRef,
     portfolioChecking,
     setPortfolioChecking,
-  } = useCvRuslanContext();
+  } = useRuslanContext();
   const [isClicked, setIsClicked] = useState<boolean>(false);
   const projectInfo = portfolioData.projects;
 

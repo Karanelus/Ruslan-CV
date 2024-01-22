@@ -1,8 +1,8 @@
-import { useCvRuslanContext } from "../context/CvRuslanContext";
+import { useRuslanContext } from "../context/RuslanContext";
 import styles from "./MobileVersionButton.styles";
 
 const ButtonBurgerMenu = () => {
-  const { setIsBurgerMenuOpen } = useCvRuslanContext();
+  const { setIsBurgerMenuOpen } = useRuslanContext();
 
   const onClickBurgerMenu = () => {
     setIsBurgerMenuOpen((prev) => !prev);

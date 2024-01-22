@@ -1,11 +1,11 @@
-import { useCvRuslanContext } from "../../../context/CvRuslanContext";
+import { useRuslanContext } from "../../../context/RuslanContext";
 import portfolioData from "../Portfolio.data";
 import styles from "../Portfolio.styles";
 import PortfolioImageCheck from "./PortfolioImageCheck";
 
 const PortfolioImage = () => {
   const { imageProjectRef, portfolioChecking, setPortfolioChecking } =
-    useCvRuslanContext();
+    useRuslanContext();
 
   const sectionStyleShortcut = styles.portfolioSection.imageSection;
   const imageSrc =
