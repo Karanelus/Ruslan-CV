@@ -2,16 +2,16 @@ import { useContext, useRef, createContext, ReactNode, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import useLocalStorage from "../hooks/useLocalStorage.hook";
 
-type CvRuslanContextProps = {
+type RuslanContextProps = {
   children: ReactNode;
 };
 
-export type CvPotfolio = {
+export type Portfolio = {
   projectNum: number;
   projectPhoto: string;
 };
 
-type CvRuslanContextContainerProps = {
+type RuslanContextContainerProps = {
   aboutProjectRef: React.RefObject<HTMLDivElement>;
   navpanelRef: React.RefObject<HTMLElement>;
   imageProjectRef: React.RefObject<HTMLDivElement>;
@@ -19,27 +19,25 @@ type CvRuslanContextContainerProps = {
   setIsMobileScreenDown: React.Dispatch<React.SetStateAction<boolean>>;
   isBurgerMenuOpen: boolean;
   setIsBurgerMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  portfolioChecking: CvPotfolio;
-  setPortfolioChecking: (value: CvPotfolio) => void;
+  portfolioChecking: Portfolio;
+  setPortfolioChecking: (value: Portfolio) => void;
   userAgent: string;
 };
 
-const CvRuslanContextContainer = createContext(
-  {} as CvRuslanContextContainerProps,
-);
+const RuslanContextContainer = createContext({} as RuslanContextContainerProps);
 
 export const useRuslanContext = () => {
-  return useContext(CvRuslanContextContainer);
+  return useContext(RuslanContextContainer);
 };
 
-const RuslanContext = ({ children }: CvRuslanContextProps) => {
+const RuslanContext = ({ children }: RuslanContextProps) => {
   const aboutProjectRef = useRef<HTMLDivElement>(null);
   const navpanelRef = useRef<HTMLElement>(null);
   const imageProjectRef = useRef<HTMLDivElement>(null);
   const [isMobileScreenDown, setIsMobileScreenDown] = useState(true);
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(true);
   const userAgent = window.navigator.userAgent;
-  const [portfolioChecking, setPortfolioChecking] = useLocalStorage<CvPotfolio>(
+  const [portfolioChecking, setPortfolioChecking] = useLocalStorage<Portfolio>(
     "portfolioChecking",
     {
       projectNum: 1,
@@ -48,7 +46,7 @@ const RuslanContext = ({ children }: CvRuslanContextProps) => {
   );
 
   return (
-    <CvRuslanContextContainer.Provider
+    <RuslanContextContainer.Provider
       value={{
         aboutProjectRef,
         navpanelRef,
@@ -63,7 +61,7 @@ const RuslanContext = ({ children }: CvRuslanContextProps) => {
       }}
     >
       <BrowserRouter>{children}</BrowserRouter>
-    </CvRuslanContextContainer.Provider>
+    </RuslanContextContainer.Provider>
   );
 };
 
