@@ -8,7 +8,7 @@ import PortfolioInfo from "./PortfolioInfo/PortfolioInfo";
 
 const PortfolioSection = () => {
   const {
-    aboutProjectRef,
+    PortfolioInfoRef,
     imageProjectRef,
     portfolioChecking,
     setPortfolioChecking,
@@ -17,7 +17,7 @@ const PortfolioSection = () => {
   const projectInfo = portfolioData.projects;
 
   const onClickArrow = (e: React.MouseEvent<HTMLButtonElement>) => {
-    const aboutProject = aboutProjectRef.current;
+    const aboutProject = PortfolioInfoRef.current;
     const imageProject = imageProjectRef.current;
     const buttonProve = e.currentTarget?.value;
     if (isClicked === false) {

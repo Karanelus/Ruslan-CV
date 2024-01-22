@@ -4,7 +4,7 @@ import { menuOptions } from "./Navigation.data";
 import NavigationLink from "./NavigationLink";
 
 const Navigation = () => {
-  const { navpanelRef, isBurgerMenuOpen } = useRuslanContext();
+  const { navPanelRef, isBurgerMenuOpen } = useRuslanContext();
 
   const styleNavigation = `${styles.navigation} ${
     isBurgerMenuOpen ? null : "-translate-y-screenOutY"
@@ -26,7 +26,7 @@ const Navigation = () => {
   ));
 
   return (
-    <nav ref={navpanelRef} className={styleNavigation}>
+    <nav ref={navPanelRef} className={styleNavigation}>
       <ul className={styles.list}>{menuOptionsList}</ul>
     </nav>
   );

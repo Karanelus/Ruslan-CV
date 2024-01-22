@@ -12,8 +12,8 @@ export type Portfolio = {
 };
 
 type RuslanContextContainerProps = {
-  aboutProjectRef: React.RefObject<HTMLDivElement>;
-  navpanelRef: React.RefObject<HTMLElement>;
+  PortfolioInfoRef: React.RefObject<HTMLDivElement>;
+  navPanelRef: React.RefObject<HTMLElement>;
   imageProjectRef: React.RefObject<HTMLDivElement>;
   isMobileScreenDown: boolean;
   setIsMobileScreenDown: React.Dispatch<React.SetStateAction<boolean>>;
@@ -31,8 +31,8 @@ export const useRuslanContext = () => {
 };
 
 const RuslanContext = ({ children }: RuslanContextProps) => {
-  const aboutProjectRef = useRef<HTMLDivElement>(null);
-  const navpanelRef = useRef<HTMLElement>(null);
+  const PortfolioInfoRef = useRef<HTMLDivElement>(null);
+  const navPanelRef = useRef<HTMLElement>(null);
   const imageProjectRef = useRef<HTMLDivElement>(null);
   const [isMobileScreenDown, setIsMobileScreenDown] = useState(true);
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(true);
@@ -48,8 +48,8 @@ const RuslanContext = ({ children }: RuslanContextProps) => {
   return (
     <RuslanContextContainer.Provider
       value={{
-        aboutProjectRef,
-        navpanelRef,
+        PortfolioInfoRef,
+        navPanelRef,
         imageProjectRef,
         isMobileScreenDown,
         setIsMobileScreenDown,

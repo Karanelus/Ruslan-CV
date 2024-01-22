@@ -4,7 +4,7 @@ import styles from "../Portfolio.styles";
 import PortfolioInfoLinkButton from "./PortfolioInfoLinkButton";
 
 const PortfolioInfo = () => {
-  const { aboutProjectRef, portfolioChecking } = useRuslanContext();
+  const { PortfolioInfoRef, portfolioChecking } = useRuslanContext();
 
   const projectInfo = portfolioData.projects;
   const showedProject = projectInfo.find(
@@ -29,7 +29,7 @@ const PortfolioInfo = () => {
   ));
 
   return (
-    <div ref={aboutProjectRef} className={sectionStylesShortcut.container}>
+    <div ref={PortfolioInfoRef} className={sectionStylesShortcut.container}>
       <h3 className={sectionStylesShortcut.headerText}>
         <b>{headerText}</b>
       </h3>
