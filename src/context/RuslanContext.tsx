@@ -7,8 +7,8 @@ type RuslanContextProps = {
 };
 
 export type Portfolio = {
-  projectNum: number;
-  projectPhoto: string;
+  projectNumber: number;
+  photoNumber: string;
 };
 
 type RuslanContextContainerProps = {
@@ -40,8 +40,8 @@ const RuslanContext = ({ children }: RuslanContextProps) => {
   const [portfolioChecking, setPortfolioChecking] = useLocalStorage<Portfolio>(
     "portfolioChecking",
     {
-      projectNum: 1,
-      projectPhoto: "1",
+      projectNumber: 1,
+      photoNumber: "1",
     },
   );
 

@@ -9,7 +9,7 @@ type Props = {
 const PortfolioImageCheck = ({ onClickSetPhoto, id }: Props) => {
   const { portfolioChecking } = useRuslanContext();
 
-  const isIdMatches = portfolioChecking.projectPhoto === id;
+  const isIdMatches = portfolioChecking.photoNumber === id;
   const sectionStyleShortcut =
     styles.portfolioSection.imageSection.imageCheckButtons.checkButton;
   const checkStyleNotMatched =

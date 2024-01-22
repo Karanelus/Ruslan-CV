@@ -8,7 +8,7 @@ const PortfolioInfo = () => {
 
   const projectInfo = portfolioData.projects;
   const showedProject = projectInfo.find(
-    (project) => project.id === portfolioChecking.projectNum,
+    (project) => project.id === portfolioChecking.projectNumber,
   )!;
   const sectionStylesShortcut = styles.portfolioSection.projectInfoSection;
   const headerText = showedProject.nameOfProject;

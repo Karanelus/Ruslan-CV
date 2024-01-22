@@ -10,11 +10,11 @@ const PortfolioImage = () => {
   const sectionStyleShortcut = styles.portfolioSection.imageSection;
   const imageSrc =
     process.env.PUBLIC_URL +
-    `/img/02_portfolio/project_${portfolioChecking.projectNum}/img${portfolioChecking.projectPhoto}.png`;
+    `/img/02_portfolio/project_${portfolioChecking.projectNumber}/img${portfolioChecking.photoNumber}.png`;
   const onClickSetPhoto = (e: React.MouseEvent<HTMLInputElement>) => {
     setPortfolioChecking({
       ...portfolioChecking,
-      projectPhoto: e.currentTarget.id,
+      photoNumber: e.currentTarget.id,
     });
   };
 

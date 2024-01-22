@@ -29,15 +29,15 @@ const PortfolioSection = () => {
         imageProject?.addEventListener(
           "transitionend",
           () => {
-            if (portfolioChecking.projectNum === 1) {
+            if (portfolioChecking.projectNumber === 1) {
               setPortfolioChecking({
                 ...portfolioChecking,
-                projectNum: projectInfo.length,
+                projectNumber: projectInfo.length,
               });
             } else {
               setPortfolioChecking({
                 ...portfolioChecking,
-                projectNum: portfolioChecking.projectNum - 1,
+                projectNumber: portfolioChecking.projectNumber - 1,
               });
             }
             aboutProject?.classList.remove("-translate-y-1", "opacity-0");
@@ -55,12 +55,12 @@ const PortfolioSection = () => {
         aboutProject?.addEventListener(
           "transitionend",
           () => {
-            if (portfolioChecking.projectNum === projectInfo.length) {
-              setPortfolioChecking({ ...portfolioChecking, projectNum: 1 });
+            if (portfolioChecking.projectNumber === projectInfo.length) {
+              setPortfolioChecking({ ...portfolioChecking, projectNumber: 1 });
             } else {
               setPortfolioChecking({
                 ...portfolioChecking,
-                projectNum: portfolioChecking.projectNum + 1,
+                projectNumber: portfolioChecking.projectNumber + 1,
               });
             }
             imageProject?.classList.remove("-translate-y-1", "opacity-0");
